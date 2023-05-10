@@ -2,16 +2,114 @@
 <html>
 <head>
     <title>Search</title>
-    <style>body{background-color:#2C2F33;color:#DCDDDE;font-family:Arial,sans-serif;padding:0;margin:0;line-height:1.5em}h1{font-size:3em;padding-top:50px;color:#FFFFFF;text-align:center;margin:0}.container{display:flex;flex-direction:column;justify-content:center;align-items:center;height:100vh}input[type="text"]{padding:10px;border-radius:20px;font-size:1.2em;width:60%;border:none;background-color:#333333;color:#DCDDDE;margin:20px}input[type="submit"]{background-color:#7289DA;color:#FFFFFF;padding:10px 20px;border-radius:10px;text-decoration:none;margin-top:30px;transition:background-color 0.3s;border:none;font-size:1.2em;cursor:pointer}input[type="submit"]:hover{background-color:#4E5D94}</style>
+    <style>
+        body {
+            background-color: #2C2F33;
+            color: #DCDDDE;
+            font-family: Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+            line-height: 1.5em;
+        }
+        h1 {
+            font-size: 3em;
+            padding-top: 50px;
+            color: #FFFFFF;
+            text-align: center;
+            margin: 0;
+        }
+        h2 {
+            font-size: 2em;
+            padding-top: 50px;
+            margin: 0;
+            color: #FFFFFF;
+            text-align: center;
+        }
+        p {
+            font-size: 1.2em;
+            padding-top: 20px;
+            text-align: justify;
+            max-width: 800px;
+            margin: auto;
+            padding-bottom: 30px;
+        }
+        img {
+            display: block;
+            margin: auto;
+            padding-top: 50px;
+            max-width: 800px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        input[type="text"] {
+            padding: 10px;
+            border-radius: 20px;
+            font-size: 1.2em;
+            width: 60%;
+            border: none;
+            background-color: #333333;
+            color: #DCDDDE;
+            margin: 20px;
+        }
+        input[type="submit"] {
+            background-color: #7289DA;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-top: 30px;
+            transition: background-color 0.3s;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #4E5D94;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>Search Page</h1>
+
         <form>
             <input type="text" id="search" placeholder="Search...">
             <input type="submit" value="Search">
         </form>
+
+        <h2>About Me</h2>
+
+        <img src="[insert profile picture URL]" alt="[insert alt text here]">
+
+        <h2>Introduction</h2>
+
+        <p>Hello! My name is [insert your name] and I am a [insert your profession/student at/other] from [insert your location].</p>
+
+        <h2>Interests</h2>
+
+        <p>I am passionate about [insert your interests/hobbies] and am constantly seeking new knowledge and experiences. In my free time, you can find me [insert your favorite activities].</p>
+
+        <h2>Future Goals</h2>
+
+        <p>My goal is to [insert your future goals]. I am excited to connect with and learn from other like-minded individuals!</p>
+
     </div>
-    <script>const e=document.querySelector("form"),t=document.querySelector("#search");e.addEventListener("submit",(e=>{e.preventDefault(),alert(`You searched for: ${t.value}`)}));</script>
+
+    <script>
+        const form = document.querySelector('form');
+        const search = document.querySelector('#search');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Replace this with your search functionality
+            alert(`You searched for: ${search.value}`);
+        });
+    </script>
+
 </body>
 </html>
